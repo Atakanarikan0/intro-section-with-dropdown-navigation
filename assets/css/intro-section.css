@@ -1,0 +1,243 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "epilogue";
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+
+/* Mobile first */
+.container {
+  margin-inline: auto;
+  padding-block: 16px 94px;
+  background-color: #FAFAFA;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 16px;
+  margin-bottom: 24px;
+}
+.content {
+  padding: 48px 16px;
+  text-align: center;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+  color: #151515;
+  margin-bottom: 16px;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #686868;
+  margin-bottom: 24px;
+}
+a {
+  text-decoration: none;
+  color: #686868;
+}
+.title-btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.2222222238779068px;
+  background-color: #151515;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 15px;
+  border: 1px solid #151515;
+}
+.work-desktop {
+  display: none;
+}
+.partners {
+  padding-inline: 16px;
+  margin-top: 48px;
+}
+.desktop-menu {
+  display: none;
+}
+
+@media (width >= 1280px) {
+  .container {
+    max-width: 1440px;
+    padding: 32px 40px 122px;
+  }
+  .work-desktop {
+    display: block;
+  }
+  .work-mobile {
+    display: none;
+  }
+  .header-nav {
+    margin-bottom: 67px;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .desktop-menu {
+    display: block;
+  }
+  .nav {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+    list-style: none;
+  }
+  .links-list .link-active {
+    background: url(../img/down-icon.svg) no-repeat right;
+    padding-right: 13px;
+  }
+  .links-list {
+    display: flex;
+    margin-left: 62px;
+    gap: 57px;
+    list-style: none;
+  }
+  .links-list li {
+    position: relative;
+  }
+  .links-list li:hover ul {
+    display: block;
+    padding: 24px;
+  }
+  .links-list li ul {
+    display: none;
+    position: absolute;
+    right: -10px;
+    top: 30px;
+    text-align: center;
+  }
+  .inside-menu {
+    width: 153px;
+    background-color: #fff;
+    box-shadow: 0px 10px 40px 0px #00000026;
+    border-radius: 4px;
+    padding: 0;
+  }
+  .inside-menu li {
+    list-style: none;
+    margin-bottom: 16px;
+  }
+  .inside-menu li:last-child {
+    margin-bottom: 0;
+  }
+  .inside-menu .todo-list-icon {
+    background: url(../img/todo-list-icon.svg) no-repeat left;
+    padding-left: 29px;
+    padding-top: 5px;
+  }
+  .inside-menu .calendar-icon {
+    background: url(../img/calendar-img.svg) no-repeat left;
+    padding-left: 29px;
+    padding-top: 5px;
+  }
+  .inside-menu .reminders-icon {
+    background: url(../img/reminders-icon.svg) no-repeat left;
+    padding-left: 29px;
+    padding-top: 5px;
+  }
+  .inside-menu .plan-icon{
+    background: url(../img/plan-icon.svg) no-repeat left;
+    padding-left: 29px;
+    padding-top: 5px;
+  }
+  /* .links-list li > a:nth-child(1), a:nth-child(2) {
+    background: url(../img/down-icon.svg) no-repeat right;
+    padding-right: 15px;
+  } */
+  .content {
+    text-align: left;
+  }
+  .title {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 125px 90px;
+  }
+  .title img {
+    order: 1;
+  }
+  .content {
+    padding: 104px 125px 0px 0px;
+  }
+  h1 {
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: -1.11px;
+    margin-bottom: 48px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 51px;
+  }
+  .partners {
+    margin-top: 108px;
+  }
+  .active {
+    border: 1.5px solid #686868;
+    border-radius: 15px;
+    padding: 13px 22px;
+  }
+  .links-list a:hover {
+    color: #151515;
+  }
+  .nav a:hover {
+    color: #151515;
+  }
+  .nav .active:hover {
+    border: 1px solid #151515;
+  }
+  .title-btn:hover {
+    color: #151515;
+    background-color: #fff;
+    border-color: #151515;
+
+  }
+}
